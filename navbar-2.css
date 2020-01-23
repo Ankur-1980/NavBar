@@ -1,0 +1,140 @@
+body {
+  margin: 0;
+  font-family: "Bangers", sans-serif;
+  background-color: #bbb;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.container {
+  background-color: #666;
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+  border: 5px solid #f00;
+}
+
+.container #menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.container #menu a {
+  display: block;
+  text-align: left;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  border-bottom: 1px solid #f00;
+}
+
+.container #menu a:hover {
+  background-color: #777;
+}
+
+.container .logo {
+  float: left;
+  display: block;
+  font-size: 2em;
+  padding: 10px 20px;
+}
+
+.container #menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+
+.container .menu-icon {
+  padding: 28px 20px;
+  position: relative;
+  float: right;
+  cursor: pointer;
+}
+
+.container .menu-icon .nav-icon {
+  background-color: #ddd;
+  display: block;
+  height: 2px;
+  width: 18px;
+  position: relative;
+  transition: background 0.2s ease-out;
+}
+
+.container .menu-icon .nav-icon:before {
+  background-color: #ddd;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  top: 5px;
+}
+
+.container .menu-icon .nav-icon:after {
+  background-color: #ddd;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  top: -5px;
+}
+
+.container .menu-btn {
+  display: none;
+}
+
+.container .menu-btn:checked ~ #menu {
+  max-height: 240px;
+}
+
+.container .menu-btn:checked ~ .menu-icon .nav-icon {
+  background: transparent;
+}
+
+.container .menu-btn:checked ~ .menu-icon .nav-icon:before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+.container .menu-btn:checked ~ .menu-icon .nav-icon:after {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .container #menu {
+    background-color: #666;
+  }
+
+  .container li {
+    float: left;
+  }
+
+  .container #menu li a {
+    padding: 20px 30px;
+    border-right: 1px solid #f00;
+  }
+
+  .container #menu {
+    clear: none;
+    float: left;
+    max-height: none;
+  }
+
+  .container .menu-icon {
+    display: none;
+  }
+
+  .container .logo {
+    float: right;
+  }
+}
