@@ -1,30 +1,41 @@
+/* Built this mobile first. 
+Learned how to make a hamburger menu without too many tricky things
+Make sure your screen size is no wider than 768px */
+
 body {
   margin: 0;
-  font-family: "Bangers", sans-serif;
+  font-family: "Bangers", cursive;
   background-color: #bbb;
 }
 
-a {
-  color: #fff;
-  text-decoration: none;
-}
-
+/* The container everything lives in */
 .container {
   background-color: #666;
   position: fixed;
   width: 100%;
+  /* because the position is fixed the z-index is 3 so it is always on top */
   z-index: 3;
   border: 5px solid #f00;
 }
 
+/* The is formating the navigation list items inside the container */
 .container #menu {
   margin: 0;
   padding: 0;
   list-style: none;
-  overflow: hidden;
   background-color: #000;
+  overflow: hidden;
+  
 }
 
+a {
+    /* change the color of the links */
+      color: #fff;
+      /* remove color and underline from links  */
+      text-decoration: none;
+    }
+
+/* formatting the actual links in the list  */
 .container #menu a {
   display: block;
   text-align: left;
@@ -33,108 +44,85 @@ a {
   border-bottom: 1px solid #f00;
 }
 
+/* creating a hover effect on the links */
 .container #menu a:hover {
   background-color: #777;
 }
 
+/* Logo is "My Website
+Formating the size and position */
 .container .logo {
   float: left;
   display: block;
   font-size: 2em;
-  padding: 10px 20px;
+  padding: 15px;
 }
 
+/* formating the transition for the dropdown menu */
 .container #menu {
   clear: both;
   max-height: 0;
-  transition: max-height 0.2s ease-out;
+  transition: max-height 0.4s ease-in;
 }
 
+/* This is the cool part
+created a checkbox to click to open and close the menu */
 .container .menu-icon {
-  padding: 28px 20px;
+  padding: 15px;
   position: relative;
   float: right;
   cursor: pointer;
-}
+} 
 
+/* UTF-8 code &#9776 is three horizontal lines
+formatted size and color of it */
 .container .menu-icon .nav-icon {
-  background-color: #ddd;
   display: block;
-  height: 2px;
-  width: 18px;
-  position: relative;
-  transition: background 0.2s ease-out;
-}
+  font-size: 1.5em;
+  color: #fff;  
+ } 
 
-.container .menu-icon .nav-icon:before {
-  background-color: #ddd;
-  content: "";
-  display: block;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  transition: all 0.2s ease-out;
-  top: 5px;
-}
-
-.container .menu-icon .nav-icon:after {
-  background-color: #ddd;
-  content: "";
-  display: block;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  transition: all 0.2s ease-out;
-  top: -5px;
-}
-
+/* making sure the actual checkbox is invisible */
 .container .menu-btn {
   display: none;
 }
 
+/* what happens when the lines are clicked */
 .container .menu-btn:checked ~ #menu {
   max-height: 240px;
-}
+} 
 
-.container .menu-btn:checked ~ .menu-icon .nav-icon {
-  background: transparent;
-}
-
-.container .menu-btn:checked ~ .menu-icon .nav-icon:before {
-  transform: rotate(-45deg);
-  top: 0;
-}
-
-.container .menu-btn:checked ~ .menu-icon .nav-icon:after {
-  transform: rotate(45deg);
-  top: 0;
-}
-
+/* The changes that need to be made so the nav bar changes the way it looks when the screen size gets bigger */
 @media screen and (min-width: 768px) {
-  .container #menu {
+ /* changing the background color for the links */
+    .container #menu {
     background-color: #666;
   }
-
+/* moving the links to the left */
   .container li {
     float: left;
   }
-
+/* formatting the links */
   .container #menu li a {
     padding: 20px 30px;
     border-right: 1px solid #f00;
   }
 
+  /* positioning the navigation items */
   .container #menu {
     clear: none;
     float: left;
     max-height: none;
   }
 
+  /* hiding the hamburger icon */
   .container .menu-icon {
     display: none;
   }
 
+  /* moving the logo to the right */
   .container .logo {
     float: right;
+    padding: 10px 20px;
   }
-}
+
