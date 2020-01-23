@@ -5,35 +5,36 @@ body {
 }
 
 a {
-  color: #ccc;
+  color: #fff;
   text-decoration: none;
 }
 
 .container {
-  background-color: #333;
+  background-color: #666;
   position: fixed;
   width: 100%;
   z-index: 3;
   border: 5px solid #f00;
 }
 
-.container ul {
+.container #menu {
   margin: 0;
   padding: 0;
   list-style: none;
   overflow: hidden;
-  background-color: #333;
+  background-color: #000;
 }
 
-.container ul a {
+.container #menu a {
   display: block;
   text-align: left;
   padding: 10px 20px;
   font-size: 1.2em;
+  border-bottom: 1px solid #f00;
 }
 
-.container ul a:hover {
-  background-color: #444;
+.container #menu a:hover {
+  background-color: #777;
 }
 
 .container .logo {
@@ -110,12 +111,17 @@ a {
 }
 
 @media screen and (min-width: 768px) {
+  .container #menu {
+    background-color: #666;
+  }
+
   .container li {
     float: left;
   }
 
-  .container li a {
+  .container #menu li a {
     padding: 20px 30px;
+    border-right: 1px solid #f00;
   }
 
   .container #menu {
