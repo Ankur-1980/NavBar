@@ -4,20 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>NavBar Exercise</title>
+    <title>Hamburger NavBar</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Bangers&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="navbar.css" />
   </head>
   <body>
     <header>
-      <nav>
-        <h1>Grant's Walking Dog</h1>
-        <ul>
-          <li>Home</li>
-          <li>Prices</li>
-          <li>Contact</li>
-        </ul>
+      <nav id="navbar">
+        <div class="container">
+          <a href="#" class="logo">Grant's Dog Walking</a>
+          <input class="menu-btn" type="checkbox" id="menu-btn" />
+          <label for="menu-btn" class="menu-icon"
+            ><span class="nav-icon"></span
+          ></label>
+          <ul id="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Prices</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
       </nav>
     </header>
   </body>
-  
 </html>
