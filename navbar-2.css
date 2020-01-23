@@ -12,7 +12,7 @@ body {
 .container {
   background-color: #666;
   position: fixed;
-  width: 100%;
+  min-width: 100%;
   /* because the position is fixed the z-index is 3 so it is always on top */
   z-index: 3;
   border: 5px solid #f00;
