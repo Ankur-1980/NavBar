@@ -29,11 +29,11 @@ body {
 }
 
 a {
-    /* change the color of the links */
-      color: #fff;
-      /* remove color and underline from links  */
-      text-decoration: none;
-    }
+/* change the color of the links */
+    color: #fff;
+    /* remove color and underline from links  */
+    text-decoration: none;
+}
 
 /* formatting the actual links in the list  */
 .container #menu a {

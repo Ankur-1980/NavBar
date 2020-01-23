@@ -13,20 +13,30 @@
   </head>
   <body>
     <header>
-      <!-- <nav id="navbar"> -->
+        <!-- the nav element is here so people with disabilities using readers know there is navigtaion located here -->
+      <nav>
+          <!-- container everything lives in -->
         <div class="container">
+            <!-- name of the company -->
           <a href="#" class="logo">My Website</a>
+          <!-- the check box and "icon" -->
+        
+         <!-- the class and for need to be the same so they recognize each other. That way when you click the "icon" it will activate the checkbox. -->
+         
+        <!-- And you can hide the actual checkbox -->
           <input class="menu-btn" type="checkbox" id="menu-btn" />
-          <label for="menu-btn" class="menu-icon"
-            ><span class="nav-icon">&#9776</span></label
-          >
+          <label for="menu-btn" class="menu-icon">
+              <!-- "icon" for three parallel lines -->
+        <span class="nav-icon">&#9776</span>
+    </label>
+        <!-- the navigtaion links -->
           <ul id="menu">
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Contact Us</a></li>
           </ul>
         </div>
-      <!-- </nav> -->
+      </nav>
     </header>
   </body>
 </html>
